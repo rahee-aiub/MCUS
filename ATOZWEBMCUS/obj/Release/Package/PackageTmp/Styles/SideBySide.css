@@ -1,0 +1,69 @@
+﻿.DivLeftSide
+{
+	margin: 0;
+	float: left;
+	width: auto;
+}
+.DivRightSide
+{
+	margin: 0;
+	float: left;
+	width: auto;
+}
+
+#calendarContainer
+{
+	overflow: hidden;
+	border: 1px solid black;
+}
+#calendarContainer .calendarColumn
+{
+	padding-bottom: 1001em;
+	margin-bottom: -1000em;
+	border: 1px solid black;
+	overflow: hidden;
+	float: left;
+}
+#navigateButtonLeft
+{
+}
+#calendar
+{
+	width: 80%;
+}
+#navigateButtonRight
+{
+}
+#header
+{
+	width: 100%;
+	background-color: red;
+	height: 331px;
+}
+
+#container
+{
+	width: 300px;
+	background-color: #ffcc33;
+	margin: auto;
+}
+#first
+{
+	width: 293px;
+	left: 00px;
+	float: left;
+	height: 300px;
+	background-color: blue;
+}
+#second
+{
+	width: 499px;
+	float: right;
+	height: 300px;
+	background-color: green;
+}
+#clear
+{
+	clear: both;
+}
+

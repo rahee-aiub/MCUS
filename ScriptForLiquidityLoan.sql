@@ -1,0 +1,14 @@
+USE A2ZCSMCUS
+GO
+
+UPDATE A2ZACCTYPE SET AccTypeClass = 8
+WHERE AccTypeCode = 54
+GO
+
+UPDATE A2ZACCCTRL SET RecordFlag = 1
+WHERE ProductCode = 54 AND ControlCode = 2 AND RecordCode = 13
+GO
+
+UPDATE A2ZCSPARAM SET PrmPeriod = 24
+WHERE AccType = 54
+GO

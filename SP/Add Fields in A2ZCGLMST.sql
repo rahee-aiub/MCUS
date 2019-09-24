@@ -1,0 +1,9 @@
+USE [A2ZGLMCUS]
+GO
+
+ALTER TABLE A2ZCGLMST ADD  Status int
+
+
+
+
+

@@ -1,0 +1,96 @@
+﻿
+	
+	body 
+	{
+		
+	background: #0359A0;	
+	
+    /*background:url(../Images/HeaderBackground.png);*/
+	
+	width:auto;	
+	
+	color: #000000;
+	
+	margin: 0px auto 0px;
+	
+	padding: 0px;
+}
+	
+	
+
+	
+	
+	
+/************************************************
+
+*	Header  									*
+
+************************************************/
+
+#header {
+
+	background:#205E8C;
+	
+	color: #FFFFFF;
+
+	width: auto;
+	
+	height:80px;
+
+	margin: 0px auto 0px;
+
+	padding: 0px;
+
+	overflow: hidden;	
+
+	}
+	
+	
+
+
+
+/************************************************
+
+*	Content 					     		    * 
+
+************************************************/
+
+
+
+#content {
+
+	width: auto;
+	
+	background:url('../images/bck_black_5.png');
+	
+	margin: 0px auto 0px;
+
+	padding: 10px 0px 10px 0px;
+
+	line-height: 20px;
+
+	}
+
+
+/************************************************
+
+*	Homepage 					            	* 
+
+************************************************/
+
+	
+	
+#homepage {
+
+	width: auto;
+
+	margin: 0px auto 0px;
+
+	padding: 0px 0px 0px 0px;
+	
+	background-color:#ffffff;
+	
+	min-height : 480px;
+	
+}
+

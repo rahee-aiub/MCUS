@@ -1,0 +1,6 @@
+ private static string Right(string param, int length)
+        {
+            string result = param.Substring(param.Length - length, length);
+            //return the result of the operation
+            return result;
+        }

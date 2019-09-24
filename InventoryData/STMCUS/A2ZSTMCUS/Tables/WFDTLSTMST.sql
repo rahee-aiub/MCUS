@@ -1,0 +1,38 @@
+USE [A2ZSTMCUS]
+GO
+
+/****** Object:  Table [dbo].[WFDTLSTMST]    Script Date: 6/23/2018 10:04:08 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[WFDTLSTMST](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[STKWareHouse] [int] NULL,
+	[STKWareHouseName] [nvarchar](100) NULL,
+	[STKItemCode] [int] NULL,
+	[STKItemName] [nvarchar](50) NULL,
+	[STKGroup] [int] NULL,
+	[STKSubGroup] [int] NULL,
+	[STKUnit] [int] NULL,
+	[STKUnitQty] [int] NULL,
+	[STKUnitAvgCost] [money] NULL,
+	[STKUnitCost] [money] NULL,
+	[STKTPUnitQty] [int] NULL,
+	[STKTPUnitCost] [money] NULL,
+ CONSTRAINT [PK_WFDTLSTMST] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[WFDTLSTMST] ADD  CONSTRAINT [DF_WFDTLSTMST_STKUnitQty]  DEFAULT ((0)) FOR [STKUnitQty]
+GO
+
+ALTER TABLE [dbo].[WFDTLSTMST] ADD  CONSTRAINT [DF_WFDTLSTMST_STKTPUnitQty]  DEFAULT ((0)) FOR [STKTPUnitQty]
+GO
+

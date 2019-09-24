@@ -1,0 +1,24 @@
+USE [A2ZHRMCUS]
+GO
+/****** Object:  Table [dbo].[WFSETTLEMENT]    Script Date: 06/12/2019 11:57:46 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[WFSETTLEMENT](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[EmpCode] [smallint] NULL,
+	[AccountHead] [nvarchar](100) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+	[Amount] [money] NULL CONSTRAINT [DF_WFSETTLEMENT_Amount]  DEFAULT ((0)),
+	[Flag] [smallint] NULL CONSTRAINT [DF_WFSETTLEMENT_Flag]  DEFAULT ((0)),
+	[GLCodeDr] [int] NULL CONSTRAINT [DF_WFSETTLEMENT_GLCodeDr]  DEFAULT ((0)),
+	[GLCodeCr] [int] NULL CONSTRAINT [DF_WFSETTLEMENT_GLCodeCr]  DEFAULT ((0)),
+	[GLAccDesc] [nvarchar](100) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+	[AccNo] [bigint] NULL CONSTRAINT [DF_WFSETTLEMENT_AccNo]  DEFAULT ((0)),
+	[ShowInterest] [int] NULL DEFAULT ((0)),
+	[TrnInterestAmt] [money] NULL DEFAULT ((0)),
+ CONSTRAINT [PK_WFSETTLEMENT] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]

@@ -1,0 +1,1 @@
+SELECT CuType,CuNo,MemNo,AccType,AccNo,Trndate,TrnDueIntAmt from A2ZCSMCUST2017..A2ZTRANSACTION WHERE AccType=52 AND TrnFlag = 0 and PayType=352 and TrnDueIntAmt > 0 AND TrnDate <= '2017-05-14' order by Trndate DESC

@@ -1,0 +1,68 @@
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+go
+
+
+
+
+
+
+
+
+
+/*
+EXECUTE Sp_rptCSLedgerBal 
+*/
+
+
+ALTER PROCEDURE [dbo].[Sp_rptCSLedgerBal] 
+AS
+BEGIN
+
+TRUNCATE TABLE WFCSLEDGERBALANCE;
+
+
+
+
+
+UPDATE A2ZACCOUNT SET A2ZACCOUNT.AccProvBalance = A2ZACCOUNT.AccPrevProvBalance,
+A2ZACCOUNT.AccProvCalDate = A2ZACCOUNT.AccPrevProvCalDate
+FROM A2ZACCOUNT,WFCSPROVISIONFDR
+WHERE A2ZACCOUNT.AccType = WFCSPROVISIONFDR.AccType AND A2ZACCOUNT.AccNo = WFCSPROVISIONFDR.AccNo AND 
+A2ZACCOUNT.CuType = WFCSPROVISIONFDR.CuType AND A2ZACCOUNT.CuNo = WFCSPROVISIONFDR.CuNo AND 
+A2ZACCOUNT.MemNo = WFCSPROVISIONFDR.MemNo;
+
+
+
+INSERT INTO WFCSLEDGERBALANCE
+	CuType,CuNo,MemNo,MemName,AccNo,OpenDate,Status,LastTrnDate,Balance
+	
+    FROM dbo.A2ZACCOUNT.CuType,dbo.A2ZACCOUNT.CuNo,dbo.A2ZACCOUNT.MemNo, 
+
+
+
+A2ZACCOUNT (@cuType,@cuNo,@memNo,@accType,@accNo,@trnCode,@trnDate,@accBalance,@accOrgAmt,@accPrincipal,@accIntRate,@accOpenDate,
+	@accRenwlDate,@accAnniDate,@accRenwlAmt,@accPeriodMonths,@accMatureDate,@accNoAnni,@accNoRenwl,@AdjProvAmtCr,@AdjProvAmtDr,@calInterest,@newNoAnni,@newAnniDate,@newLastIntCr,@newAnniAmt,@fdAmount,@noDays,@cuNumber,@memName,
+    @FuncOpt,@PayType,@TrnDesc,@TrnType,@TrnDrCr,@ShowInterest,@TrnGLAccNoDr,@TrnGLAccNoCr,@UserID,1,@fDate);
+
+
+
+
+SELECT     TOP (100) PERCENT dbo.A2ZACCOUNT.CuType, dbo.A2ZACCOUNT.CuNo, dbo.A2ZACCOUNT.AccType, dbo.A2ZACCOUNT.AccNo, dbo.A2ZACCOUNT.MemNo, 
+                      dbo.A2ZACCOUNT.AccOpenDate, dbo.A2ZACCOUNT.AccStatus, dbo.A2ZACCOUNT.AccBalance, dbo.A2ZACCSTATUS.AccStatusDescription, 
+                      dbo.A2ZACCOUNT.AccLastTrnDateU, dbo.A2ZCUNION.CuName, dbo.A2ZMEMBER.MemName, dbo.A2ZACCOUNT.AccOpBal
+FROM         dbo.A2ZACCOUNT INNER JOIN
+                      dbo.A2ZCUNION ON dbo.A2ZACCOUNT.CuType = dbo.A2ZCUNION.CuType AND dbo.A2ZACCOUNT.CuNo = dbo.A2ZCUNION.CuNo LEFT OUTER JOIN
+                      dbo.A2ZMEMBER ON dbo.A2ZACCOUNT.CuType = dbo.A2ZMEMBER.CuType AND dbo.A2ZACCOUNT.CuNo = dbo.A2ZMEMBER.CuNo AND 
+                      dbo.A2ZACCOUNT.MemNo = dbo.A2ZMEMBER.MemNo LEFT OUTER JOIN
+                      dbo.A2ZACCSTATUS ON dbo.A2ZACCOUNT.AccStatus = dbo.A2ZACCSTATUS.AccStatusCode
+ORDER BY dbo.A2ZACCOUNT.CuType, dbo.A2ZACCOUNT.CuNo
+
+END
+
+
+
+
+
+
+

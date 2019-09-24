@@ -1,0 +1,72 @@
+﻿*
+{
+	 padding: 0 auto;
+	 margin:0 auto;
+}
+body
+{
+
+	background: url(../Images/PNG.png)no-repeat;
+	 
+}
+
+.MenuBar {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.StaticMenuItem {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    background-color:  maroon;    
+    font: 13pt calibri;    
+    margin: auto;
+    vertical-align: middle;
+    background-repeat: repeat-x;
+    height: 70px;
+    text-align: center;
+    color: white; 
+}
+
+.StaticMenuItemStyle {
+    color: #fcfcfc;
+    padding: 20px;
+    border: solid;
+    border-width: 3px;
+    border-color: white;
+}
+
+.StaticHoverStyle {
+    background-color: maroon;
+    color: #FFFFFF;
+}
+
+.StaticSelectedStyle {
+    background-color: maroon;
+    color:  #000000;
+}
+
+.DynamicMenuItemStyle {
+    background-color: maroon;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000000;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    font: 12pt calibri;
+    margin: auto;
+    border-left: 0px solid #c1c1c1;
+    border-right: 0px solid #c1c1c1;
+    border-top: 0px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+    border-spacing: 0px;
+    vertical-align: middle;
+    background-repeat: repeat-x;
+    height: 50px;
+    text-align: left;
+    color: #F6F6F6;
+    padding: 5px;
+}
+
+.DynamicHoverStyle {
+   background-color: #000000;
+    color: #ffffff;
+}

@@ -1,0 +1,126 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OffBoothMenuMasterPage.master.cs"
+    Inherits="ATOZWEBMCUS.MasterPages.OffBoothMenuMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="../Styles/CSMenuMaster.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/TableStyle1.css" rel="stylesheet" type="text/css" />
+    <script src="../scripts/validation.js" type="text/javascript"></script>
+    <title>Untitled Page</title>
+    <script language="javascript" type="text/javascript">
+
+        function DisableBackButton() {
+            window.history.forward();
+        }
+        setTimeout("DisableBackButton()", 0);
+        window.onunload = function () { null };
+
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div>
+            <table class="style3">
+                <tr>
+                    <td>
+                        <asp:Label ID="Label4" runat="server" Text="Process Date :" Font-Bold="true"></asp:Label>
+                    </td>
+                    
+                    <td>
+                        <asp:Label ID="lblProcessDate" runat="server" Text="" ></asp:Label>
+                    </td>
+
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+                        <asp:Label ID="lblCompanyName" runat="server" Text="" Font-Size="Large" Font-Bold="true" ></asp:Label>
+                    </td>
+
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   
+                        <asp:Label ID="Label6" runat="server" Text="User Name :" Font-Bold="true"></asp:Label>
+                    </td>
+                    
+                    <td>
+                        <asp:Label ID="lblUserName" runat="server" Text="" ></asp:Label>
+                        
+                    </td>
+                </tr>
+            </table>
+
+
+        </div>
+        <div>
+            <asp:Menu ID="menuBar" runat="server" Orientation="Horizontal" Width="100%" CssClass="MenuBar"
+                MaximumDynamicDisplayLevels="10">
+                <StaticMenuStyle CssClass="StaticMenuItem" />
+                <StaticMenuItemStyle CssClass="StaticMenuItemStyle" />
+                <StaticHoverStyle CssClass="StaticHoverStyle" />
+                <StaticSelectedStyle CssClass="StaticSelectedStyle" />
+                <DynamicMenuItemStyle CssClass="DynamicMenuItemStyle" />
+                <DynamicHoverStyle CssClass="DynamicHoverStyle" />
+            </asp:Menu>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+
+        <div align="center">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label3" runat="server" Text="Off line Booth Module" Font-Bold="True" Font-Size="XX-Large" ForeColor="#009900" Height="40px"></asp:Label><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="lblOffBoothNo" runat="server" Text="" Font-Bold="True" Font-Size="XX-Large" ForeColor="#009900" Height="40px"></asp:Label>&nbsp;&nbsp;
+            <asp:Label ID="lblOffBoothName" runat="server" Text="" Font-Bold="True" Font-Size="XX-Large" ForeColor="#009900" Height="40px"></asp:Label>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+
+
+
+        <div align="center">
+            <table class="style3">
+                <thead>
+                    <tr>
+                        <th>Developed By AtoZ Computer Services - Version 1.0<br />
+                            Last Update: November, 2015.
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <asp:HiddenField ID="hdnCashCode" runat="server" />
+
+        <div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+    </form>
+</body>
+</html>
+

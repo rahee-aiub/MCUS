@@ -1,0 +1,58 @@
+﻿
+.textbox {
+    background: white;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #DDD inset;
+    color: #666;
+    outline: none;
+    height: 25px;
+    width: 127px;
+}
+
+.textbox2 {
+    background: white url(../Images/percentage.jpg) no-repeat;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #DDD inset;
+    color: #666;
+    outline: none;
+    height: 25px;
+    width: 60px;
+}
+
+
+
+.textbox3 {
+    background: white;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #DDD inset;
+    color: #666;
+    outline: none;
+    height: 25px;
+    width: 255px;
+}
+
+
+
+.textbox4 {
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #DDD inset;
+    color: #666;
+    outline: none;
+    height: 25px;
+    width: 60px;
+}
+
+.textbox5 {
+    background: white;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #DDD inset;
+    color: #666;
+    outline: none;
+    height: 25px;
+    width: 150px;
+}

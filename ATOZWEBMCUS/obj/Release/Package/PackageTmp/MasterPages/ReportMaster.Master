@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ReportMaster.master.cs"
+    Inherits="A2ZERPWEB.MasterPages.ReportMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="../Styles/TableStyle1.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/reportStyle.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrap">
+        <div id="header">
+            <h1>
+                AtoZ Web Jewellery</h1>
+        </div>
+        <div style="clear: both;">
+        </div>
+        <div id="content">
+            <div id="homepage">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <noscript>
+                        <span style="color: red"><b>Please enable the JavaScript in your browser for proper
+                            functioning of site. </b></span>
+                    </noscript>
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div style="clear: both;">
+        </div>
+        <div id="footer">
+            <br />
+            <table width="100%">
+                <tr>
+                    <td style="background: #5588CC; color: White; font-weight: bold;" align="center"
+                        width="33%">
+                        <p>
+                            Copyright © 2012 <a href="#"></a>
+                        </p>
+                    </td>
+                    <td style="background: #5588CC; color: White; font-weight: bold" align="center" width="33%">
+                        Date:
+                        <asp:Label ID="dateTimeLabel" runat="server"></asp:Label>
+
+                        <script language="javascript" type="text/javascript">
+                            function ShowDateTime() {
+                                var label = document.getElementById("<%=dateTimeLabel.ClientID%>");
+                                var dateString = new Date();
+                                var getMonth = dateString.getMonth() + 1;
+                                label.innerHTML = dateString.getDate() + '/' + getMonth + '/' + dateString.getFullYear();
+                                if (dateString.getHours() > 11) {
+                                    var hours = dateString.getHours();
+                                    if (dateString.getHours() > 12)
+                                        hours -= 12;
+                                    label.innerHTML += ' ' + hours + ':' + dateString.getMinutes() + ':' + dateString.getSeconds() + ' PM';
+                                } else
+                                    label.innerHTML += ' ' + dateString.getHours() + ':' + dateString.getMinutes() + ':' + dateString.getSeconds() + ' AM';
+                            }
+                        </script>
+
+                    </td>
+                    <td style="background: #5588CC; color: White; font-weight: bold" align="center" width="33%">
+                        <p>
+                            Developed by <a href="http://www.google.com/"></a>AtoZ Computer Services
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+USE [A2ZCSMCUS]
+GO
+
+/****** Object:  Table [dbo].[WFGRNINFORMATIONRPT]    Script Date: 03/18/2018 1:29:02 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[WFGRNINFORMATIONRPT](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[CuType] [smallint] NULL,
+	[CuNo] [int] NULL,
+	[CuName] [nvarchar](50) NULL,
+	[AccType] [smallint] NULL,
+	[AccTypeDescription] [nvarchar](50) NULL,
+	[MemNo] [int] NULL,
+	[MemName] [nvarchar](50) NULL,
+	[AccNo] [nvarchar](50) NULL,
+	[AccStatus] [tinyint] NULL,
+	[AccBalance] [money] NULL,
+	[AccLoanSancAmt] [money] NULL,
+	[GurLoanApplicationNo] [int] NULL,
+	[GurAccAmount] [money] NULL,
+	[GurAccNo] [nvarchar](50) NULL,
+	[GurAccLeanAmount] [money] NULL,
+	[SortFlag] [int] NULL,
+	[LoanApplicationNo] [int] NULL,
+ CONSTRAINT [PK_WFGRNINFORMATIONRPT] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[WFGRNINFORMATIONRPT] ADD  CONSTRAINT [DF_WFGRNINFORMATIONRPT_AccLoanSancAmt]  DEFAULT ((0)) FOR [AccLoanSancAmt]
+GO
+
+ALTER TABLE [dbo].[WFGRNINFORMATIONRPT] ADD  CONSTRAINT [DF_WFGRNINFORMATIONRPT_LoanApplicationNo]  DEFAULT ((0)) FOR [GurLoanApplicationNo]
+GO
+
+ALTER TABLE [dbo].[WFGRNINFORMATIONRPT] ADD  CONSTRAINT [DF_WFGRNINFORMATIONRPT_AccAmount]  DEFAULT ((0)) FOR [GurAccAmount]
+GO
+
+ALTER TABLE [dbo].[WFGRNINFORMATIONRPT] ADD  CONSTRAINT [DF_WFGRNINFORMATIONRPT_AccNo1]  DEFAULT ((0)) FOR [GurAccNo]
+GO
+
+ALTER TABLE [dbo].[WFGRNINFORMATIONRPT] ADD  CONSTRAINT [DF_WFGRNINFORMATIONRPT_GurAccAmount1]  DEFAULT ((0)) FOR [GurAccLeanAmount]
+GO
+

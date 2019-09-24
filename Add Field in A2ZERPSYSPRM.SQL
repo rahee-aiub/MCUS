@@ -1,0 +1,7 @@
+USE [A2ZHKMCUS]
+GO
+
+
+
+ALTER TABLE A2ZHKMCUS..A2ZERPSYSPRM ADD PrmYearEndDate smalldatetime
+

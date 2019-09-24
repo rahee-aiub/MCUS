@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2C0947DA-6BCB-4BAC-9B33-635B4A5E134C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccessLayer</RootNamespace>
+    <AssemblyName>DataAccessLayer</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SoftValidity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\A2ZERPJW\DataAccessLayer\bin\SoftValidity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VbClassLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\A2ZERPJW\DataAccessLayer\bin\VbClassLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\CommonManager.cs" />
+    <Compile Include="Conn\sqlconn.cs" />
+    <Compile Include="Constants\CommonConstants.cs" />
+    <Compile Include="Constants\DBConstants.cs" />
+    <Compile Include="DAO\CommonDAO.cs" />
+    <Compile Include="DataAccessLogger\Logger.cs" />
+    <Compile Include="DTO\A2ZAUDITDTO.cs" />
+    <Compile Include="DTO\A2ZAUDRECDTO.cs" />
+    <Compile Include="DTO\A2ZSESSIONDTO.cs" />
+    <Compile Include="DTO\A2ZSYSIDSDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZACCCTRLDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZACCFIELDSDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZACCNOMINEEDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZACCOUNTDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZACCSTATUSDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZACCTYPEDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZCASHCODECTLRDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZCHQBOOKDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZCHQCOUNTERDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZCOLLECTORDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZCSPARAMDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZCUAPPLICATIONDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZGROUPTRNDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZINVPARAMETERDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZLOANDEFAULTERDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZLOANDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZLOANHSTDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZLOANSCHEDULEDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZMEMBERDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZCUNIONDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZERPMENUDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZCSPARAMETERDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZOBJDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZPAYTYPEDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZPENSIONDEFAULTERDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZPENSIONDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZRECCTRLDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZRECCTRLNODTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZTRANTYPEDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZTRNCODEDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZTRNCTRLDTO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DTO\CustomerServices\A2ZTRNLIMITDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZTRNLOGICDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZTRNOPTDTO.cs" />
+    <Compile Include="DTO\CustomerServices\A2ZSTAFFLOANDTO.cs" />
+    <Compile Include="DTO\GeneralLedger\A2ZCGLMSTDTO.cs" />
+    <Compile Include="DTO\GeneralLedger\A2ZERPMENUDTO.cs" />
+    <Compile Include="DTO\GeneralLedger\A2ZGLPARAMETERDTO.cs" />
+    <Compile Include="DTO\HouseKeeping\A2ZDATABASEDTO.CS" />
+    <Compile Include="DTO\HouseKeeping\A2ZERPMENUDTO.cs" />
+    <Compile Include="DTO\HouseKeeping\A2ZERPMODULEDTO.cs" />
+    <Compile Include="DTO\HouseKeeping\A2ZERPSYSPRMDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZALLOWANCEDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZALLOWCTRLDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZALLOWCTRLDTLDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZDEDCTRLDTLDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZDEDCTRLDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZDEDUCTIONDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZEMPADDRESSDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZEMPLEAVEBALANCEDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZEMPLEAVEDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZEMPLEAVETYPEDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZEMPLOANDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZEMPLOYEEDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZEMPSALARYDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZGRADEDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZHRPARAMETERDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZINCREMENTDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZLOCATIONDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZPOSTINGDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZPROMOTIONDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZREPORTLAYOUTDTO.cs" />
+    <Compile Include="DTO\HumanResource\A2ZSERVICETYPEDTO.cs" />
+    <Compile Include="DTO\Inventory\A2ZGROUPDTO.cs" />
+    <Compile Include="DTO\Inventory\A2ZSTOCKDTO.cs" />
+    <Compile Include="DTO\Inventory\A2ZSUBGROUPDTO.cs" />
+    <Compile Include="DTO\Inventory\A2ZSUPPLIERDTO.cs" />
+    <Compile Include="DTO\Inventory\A2ZUNITDTO.cs" />
+    <Compile Include="DTO\Inventory\A2ZWAREHOUSEDTO.cs" />
+    <Compile Include="DTO\SQLTransaction.cs" />
+    <Compile Include="DTO\HumanResource\A2ZAREADTO.cs" />
+    <Compile Include="DTO\SystemControl\A2ZBANKDTO.cs" />
+    <Compile Include="DTO\SystemControl\A2ZDEPARTMENTDTO.cs" />
+    <Compile Include="DTO\SystemControl\A2ZDESIGNATIONDTO.cs" />
+    <Compile Include="DTO\SystemControl\A2ZDISTRICTDTO.cs" />
+    <Compile Include="DTO\SystemControl\A2ZDIVISIONDTO.cs" />
+    <Compile Include="DTO\SystemControl\A2ZHOLIDAYDTO.cs" />
+    <Compile Include="DTO\SystemControl\A2ZHOLIDAYTYPEDTO.cs" />
+    <Compile Include="DTO\SystemControl\A2ZLPURPOSEDTO.cs" />
+    <Compile Include="DTO\SystemControl\A2ZLSECURITYDTO.cs" />
+    <Compile Include="DTO\SystemControl\A2ZNATIONALITYDTO.cs" />
+    <Compile Include="DTO\SystemControl\A2ZNATUREDTO.cs" />
+    <Compile Include="DTO\SystemControl\A2ZPROFESSIONDTO.cs" />
+    <Compile Include="DTO\SystemControl\A2ZRELIGIONDTO.cs" />
+    <Compile Include="DTO\SystemControl\A2ZSECTIONDTO.cs" />
+    <Compile Include="DTO\SystemControl\A2ZSERVICETYPEDTO.cs" />
+    <Compile Include="DTO\SystemControl\A2ZTHANADTO.cs" />
+    <Compile Include="DTO\SystemControl\A2ZUPZILADTO.cs" />
+    <Compile Include="DTO\SystemControl\A2ZWEEKHOLIDAYDTO.cs" />
+    <Compile Include="Helper\SqlHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\AtoZUtility.cs" />
+    <Compile Include="Utility\Converter.cs" />
+    <Compile Include="Utility\DropDownListUtility.cs" />
+    <Compile Include="Utility\Enums.cs" />
+    <Compile Include="Utility\Params.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\DataAccessLayer.dll" />
+    <Content Include="bin\Debug\SoftValidity.dll" />
+    <Content Include="bin\Debug\VbClassLibrary.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
